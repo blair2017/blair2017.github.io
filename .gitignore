@@ -1,5 +1,7 @@
 .DS_Store
 _site
 .sass-cache
+.bundle
+*.deb
 Gemfile.lock
 .Rproj.user
