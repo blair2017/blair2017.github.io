@@ -1,0 +1,164 @@
+.layout-post-wechat.page
+    margin-top: 72px
+
+    @media #{$below}
+        margin-top: 60px
+
+.wechat-post
+    background: #fff
+    border: 1px solid #f0f0f0
+    border-radius: 10px
+    padding: 24px 22px
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06)
+
+    @media #{$below}
+        border-radius: 0
+        border-left: none
+        border-right: none
+        padding: 18px 16px
+        box-shadow: none
+
+.wechat-title-image
+    max-width: 100%
+    border-radius: 8px
+    display: block
+    margin: 0 auto 18px
+
+.wechat-header
+    margin-bottom: 10px
+
+.wechat-title
+    font-size: 2.6rem
+    line-height: 1.35
+    letter-spacing: 0
+    font-weight: 700
+    text-align: left
+    margin: 0 0 12px
+
+.wechat-meta
+    font-size: 1.3rem
+    color: #8c8c8c
+    margin-bottom: 24px
+    -webkit-font-smoothing: antialiased
+    text-rendering: optimizeLegibility
+
+    > .wechat-meta__author
+        color: #576b95
+        font-weight: 500
+
+    > .wechat-meta__sep
+        padding: 0 6px
+
+.wechat-content
+    color: #333
+
+    p
+        font-size: 1.7rem
+        line-height: 1.85
+        letter-spacing: 0
+        font-weight: 400
+        margin-bottom: 16px
+
+    a
+        color: #576b95
+        text-decoration: none
+        border-bottom: 1px solid rgba(87, 107, 149, 0.25)
+
+        &:hover
+            border-bottom-color: rgba(87, 107, 149, 0.6)
+
+    h2
+        font-size: 2.1rem
+        margin: 28px 0 14px
+        line-height: 1.45
+        padding-left: 10px
+        border-left: 4px solid #07c160
+
+    h3
+        font-size: 1.9rem
+        margin: 24px 0 12px
+        line-height: 1.5
+
+    h4
+        font-size: 1.6rem
+        margin: 18px 0 10px
+        line-height: 1.55
+
+    ul,
+    ol
+        margin: 0 0 16px
+        padding-left: 22px
+
+        li
+            line-height: 1.9
+            margin-bottom: 6px
+
+    blockquote
+        margin: 18px 0
+        padding: 12px 14px
+        border-left: 4px solid #07c160
+        background: #f7f8fa
+        color: #555
+
+        p:last-child
+            margin-bottom: 0
+
+    hr
+        background: #eee
+
+    img
+        display: block
+        margin: 18px auto
+        border-radius: 8px
+
+    code,
+    tt
+        background: #f2f4f5
+        border: none
+        padding: 0 4px
+        border-radius: 3px
+        font-size: 1.3rem
+
+    pre
+        background: #f7f8fa
+        border: 1px solid #e8e8e8
+        border-radius: 6px
+        padding: 12px 14px
+
+        code
+            background: transparent
+            padding: 0
+
+    table
+        width: 100%
+        border-collapse: collapse
+        margin: 18px 0
+        font-size: 1.5rem
+
+        th,
+        td
+            border: 1px solid #e8e8e8
+            padding: 8px 10px
+            vertical-align: top
+
+        th
+            background: #f7f8fa
+
+.wechat-tags
+    margin-top: 26px
+    padding-top: 14px
+    border-top: 1px dashed #eee
+
+.wechat-tag
+    display: inline-block
+    margin: 0 8px 8px 0
+    padding: 5px 10px
+    border-radius: 999px
+    background: #f2f4f5
+    color: #576b95
+    font-size: 1.3rem
+    text-decoration: none
+
+    &:hover
+        background: #e9eef5
+

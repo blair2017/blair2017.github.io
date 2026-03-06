@@ -5,3 +5,6 @@ _site
 *.deb
 Gemfile.lock
 .Rproj.user
+__pycache__/
+*.pyc
+.venv/

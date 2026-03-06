@@ -1,0 +1,45 @@
+---
+layout: page
+---
+
+{% assign author_id = page.author | default: site.name %}
+{% assign author_obj = site.authors[author_id] %}
+{% if author_obj and author_obj.name %}
+    {% assign author_name = author_obj.name %}
+{% else %}
+    {% assign author_name = author_id %}
+{% endif %}
+
+{% assign post_tags = page.tags %}
+{% if post_tags == nil or post_tags == empty %}
+    {% assign post_tags = page.tag %}
+{% endif %}
+
+<article class="post wechat-post">
+    {% if page.image and page.headerImage %}
+        <img class="wechat-title-image" src="{{ page.image }}" alt="{{ page.title }}">
+    {% endif %}
+
+    <header class="wechat-header">
+        <h1 class="wechat-title">{{ page.title }}</h1>
+
+        <div class="wechat-meta">
+            <span class="wechat-meta__author">{{ author_name }}</span>
+            <span class="wechat-meta__sep">·</span>
+            <time class="wechat-meta__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>
+        </div>
+    </header>
+
+    <div class="wechat-content">
+        {{content}}
+    </div>
+
+    {% if post_tags and post_tags != empty %}
+        <footer class="wechat-tags" aria-label="Tags">
+            {% for t in post_tags %}
+                <a class="wechat-tag" href="{{ site.url }}/tags/#{{ t | slugify }}">#{{ t }}</a>
+            {% endfor %}
+        </footer>
+    {% endif %}
+</article>
+
